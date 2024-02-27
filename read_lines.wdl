@@ -22,6 +22,6 @@ task read_file {
 workflow read_a_file {
   call read_file
   output {
-    Array[String] workflow_output = read_file.lines
+    Array[String] a1 = read_file.lines
   }
 }
