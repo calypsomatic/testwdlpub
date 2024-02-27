@@ -6,7 +6,7 @@ task read_file {
   }
 
   command {
-    echo "hi!"
+    cat ~{file_to_read}
   }
 
   output {
@@ -15,7 +15,6 @@ task read_file {
   
   runtime {
     docker: "ubuntu:latest"
-    maxRetries: 5
   }
 }
 
