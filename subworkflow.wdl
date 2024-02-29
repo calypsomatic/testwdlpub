@@ -1,17 +1,17 @@
-workflow sub {
-  task hello {
-    String addressee
-    command {
-      echo "Hello ${addressee}!"
-    }
-    runtime {
-        docker: "ubuntu:latest"
-    }
-    output {
-      String salutation = read_string(stdout())
-    }
+task hello {
+  String addressee
+  command {
+    echo "Hello ${addressee}!"
   }
+  runtime {
+      docker: "ubuntu:latest"
+  }
+  output {
+    String salutation = read_string(stdout())
+  }
+}
 
+workflow sub {
   workflow wf_hello {
     String wf_hello_input = "world"
     
