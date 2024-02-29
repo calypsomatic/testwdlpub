@@ -11,20 +11,16 @@ task hello {
   }
 }
 
-workflow sub {
-  workflow wf_hello {
+workflow wf_hello {
     String wf_hello_input = "world"
-    
     call hello { input: addressee = wf_hello_input }
-    
     output {
       String salutation = hello.salutation
     }
-  }
 }
 
 workflow main_workflow {
-    call sub.wf_hello { input: wf_hello_input = "sub world" }
+    call wf_hello { input: wf_hello_input = "sub world" }
     output {
         String main_output = wf_hello.salutation
     }
