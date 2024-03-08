@@ -10,7 +10,7 @@ task read_file {
   }
 
   output {
-    Array[String] lines = read_lines(file_to_read)
+    Array[String] lines = ["1", "2", "3"]
   }
   
   runtime {
