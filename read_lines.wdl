@@ -10,7 +10,7 @@ task read_file {
   }
 
   output {
-    File outputFile = file_to_read
+    Array[String] lines = ["1", "2", "3"]
   }
   
   runtime {
@@ -25,6 +25,6 @@ task read_file {
 workflow read_a_file {
   call read_file
   output {
-    Array[String] the_output = read_lines(read_file.outputFile)
+    Array[String] a1 = read_file.lines
   }
 }
