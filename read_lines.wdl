@@ -7,6 +7,7 @@ task read_file {
 
   command {
     cat ~{file_to_read}
+    sleep 120
   }
 
   output {
