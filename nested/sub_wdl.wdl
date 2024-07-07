@@ -4,6 +4,7 @@ task hello {
   String addressee
   command {
     echo "Hello ${addressee}!"
+    sleep 600
   }
   runtime {
     docker: "ubuntu:latest"
@@ -16,6 +17,7 @@ task goodbye {
   String addressee
   command {
     echo "Goodbye ${addressee}!"
+    sleep 600
   }
   runtime {
     docker: "ubuntu:latest"

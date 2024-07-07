@@ -1,7 +1,7 @@
 task foo {
   command {
     echo "Hello from a scatter task in a sub sub sub workflow!"
-    sleep 60
+    sleep 600
   }
   runtime {
     docker: "ubuntu:latest"

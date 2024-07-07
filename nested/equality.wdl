@@ -5,6 +5,7 @@ task test_equality {
 
   command {
     echo "hi!"
+    sleep 600
   }
 
   output {

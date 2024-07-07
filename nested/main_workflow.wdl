@@ -3,7 +3,7 @@ import "sub_wdl.wdl" as sub
 task foo {
   command {
     echo "Hello from a top level task!"
-    sleep 60
+    sleep 600
   }
   runtime {
     docker: "ubuntu:latest"
