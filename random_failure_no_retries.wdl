@@ -26,6 +26,7 @@ task randomly_fail_task {
 
   meta {
     volatile: true
+    maxRetries: 0
   }
 }
 
