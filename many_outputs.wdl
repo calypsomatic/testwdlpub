@@ -30,7 +30,7 @@ task manyOutputsTask {
 }
 
 workflow manyOutputs {
-    call manyOutputsTask {input: fileName = "filename", fileExtension = "txt", numberOfFiles = 5}
+    call manyOutputsTask
     output {
         Array[File] files = manyOutputsTask.outputFiles
         String stdout = manyOutputsTask.stdout
