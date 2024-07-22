@@ -1,0 +1,3 @@
+{
+    "manyInputs.inputFiles" : ["hi.txt", "hello.txt"]
+}
