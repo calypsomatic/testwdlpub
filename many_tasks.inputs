@@ -1,0 +1,4 @@
+{
+    manyTasks.taskDuration: 10,
+    manyTasks.numTasks: 5
+}
