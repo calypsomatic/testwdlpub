@@ -13,10 +13,6 @@ task trivialTask {
     output {
         String stdout = read_string(stdout())
     }
-
-    runtime {
-        docker: "ubuntu:latest"
-  }
 }
 
 workflow manyTasks {
